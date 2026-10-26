@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Example source",
+    "source_id": "example:source-1",
+    "source_url": "https://example.com/source-1",
+    "text": "Replace this text with a trusted, licensed source. Keep the source identifier and URL so generated answers can cite the retrieved passage."
+  }
+]

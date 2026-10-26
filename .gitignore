@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+models/*.joblib
+data/*.csv
+data/*.json
+!data/knowledge_base.json
+!data/knowledge_base.example.json
+.DS_Store

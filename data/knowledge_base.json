@@ -1,0 +1,260 @@
+[
+  {
+    "title": "ADA Diabetes Plate Method",
+    "source_id": "ada:plate-method",
+    "source_url": "https://diabetes.org/food-nutrition/eating-healthy",
+    "text": "The American Diabetes Association plate method recommends filling half the plate with non-starchy vegetables, one quarter with lean protein, and one quarter with quality carbohydrates. Mushrooms are commonly treated as a non-starchy vegetable. A person's full meal, medication, glucose readings, and clinician guidance still matter."
+  },
+  {
+    "title": "ADA Nutrition and Diabetes",
+    "source_id": "ada:nutrition",
+    "source_url": "https://professional.diabetes.org/education/diabetes-food-nutrition",
+    "text": "There is no single eating pattern that works for everyone with diabetes. Meal planning should account for carbohydrate amounts, portions, health goals, preferences, medications, and blood-glucose response. A low-carbohydrate food is not a treatment or cure for diabetes."
+  },
+  {
+    "title": "USDA FoodData Central",
+    "source_id": "usda:fooddata-central",
+    "source_url": "https://fdc.nal.usda.gov/",
+    "text": "USDA FoodData Central provides nutrient data for foods. Nutrient values vary by species, brand, preparation, and serving size; use the specific FoodData Central record rather than assuming all foods in a category have identical nutrition."
+  },
+  {
+    "title": "NHS Healthy Eating with Diabetes",
+    "source_id": "nhs:diabetes-food",
+    "source_url": "https://www.nhs.uk/conditions/type-2-diabetes/food-and-keeping-active/",
+    "text": "NHS guidance emphasizes balanced meals, portion awareness, and choosing carbohydrates thoughtfully for people with type 2 diabetes. Individual dietary advice may be needed, especially when medicines affect blood glucose."
+  },
+  {
+    "title": "FDA Morel Mushroom Food Safety",
+    "source_id": "fda:morel-mushrooms",
+    "source_url": "https://www.fda.gov/food/outbreaks-foodborne-illness/investigation-illnesses-morel-mushrooms-may-2023",
+    "text": "The FDA has investigated illnesses associated with morel mushrooms. Wild mushrooms can be difficult to identify safely, and some mushrooms can cause illness when raw or undercooked. Follow food-safety guidance and do not rely on appearance alone to identify wild mushrooms."
+  },
+  {
+    "title": "Poison Control Wild Mushroom Warning",
+    "source_id": "poisoncontrol:wild-mushrooms",
+    "source_url": "https://www.poison.org/articles/wild-mushroom-warning",
+    "text": "Poison Control warns that wild mushrooms can be mistaken for poisonous species and mushroom poisoning can cause serious illness. Do not eat an uncertain wild mushroom; seek urgent poison-control or medical advice if poisoning is suspected."
+  },
+  {
+    "title": "CDC Diabetes Management",
+    "source_id": "cdc:diabetes-management",
+    "source_url": "https://www.cdc.gov/diabetes/living-with/index.html",
+    "text": "Diabetes management includes working with a healthcare team, monitoring blood glucose as advised, taking medicines as prescribed, and following an individualized eating and activity plan. A general food answer cannot replace personal medical advice."
+  },
+  {
+    "title": "WHO Healthy Diet",
+    "source_id": "who:healthy-diet",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "text": "The World Health Organization describes a healthy diet as adequate, balanced, moderate, and diverse, with a variety of nutrient-dense foods. Dietary needs vary with age, activity, culture, health status, and local food availability."
+  },
+  {
+    "title": "WHO Antibiotic Resistance",
+    "source_id": "who:antimicrobial-resistance",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance",
+    "text": "Antimicrobial resistance occurs when microorganisms change in ways that make medicines used to treat infections less effective. Misuse and overuse of antimicrobials contribute to resistance. Antibiotics should be used only when prescribed and as directed."
+  },
+  {
+    "title": "CDC Emergency Preparedness",
+    "source_id": "cdc:emergency-preparedness",
+    "source_url": "https://www.cdc.gov/emergency/",
+    "text": "The CDC provides public-health emergency information and preparedness guidance. During an emergency, follow instructions from local authorities and use current official alerts because conditions and recommendations can change."
+  },
+  {
+    "title": "MedlinePlus Health Topics",
+    "source_id": "nih:medlineplus-health-topics",
+    "source_url": "https://medlineplus.gov/healthtopics.html",
+    "text": "MedlinePlus, provided by the U.S. National Library of Medicine, offers patient-friendly health information on diseases, symptoms, diagnosis, treatment, prevention, and wellness. Health information should be interpreted with a qualified healthcare professional when it concerns an individual's symptoms or treatment."
+  },
+  {
+    "title": "MedlinePlus Drugs and Supplements",
+    "source_id": "nih:medlineplus-drugs",
+    "source_url": "https://medlineplus.gov/druginformation.html",
+    "text": "MedlinePlus provides information about prescription and nonprescription medicines, supplements, side effects, precautions, and interactions. Medication decisions depend on the specific product, dose, patient, and clinician or pharmacist advice; do not start, stop, or change a medicine based only on a general answer."
+  },
+  {
+    "title": "MedlinePlus Symptom Checker",
+    "source_id": "nih:medlineplus-symptoms",
+    "source_url": "https://medlineplus.gov/symptomchecker.html",
+    "text": "The MedlinePlus symptom checker is an educational resource and is not a substitute for professional medical advice, diagnosis, or treatment. Urgent or severe symptoms require local emergency services or prompt medical evaluation rather than an AI-generated conclusion."
+  },
+  {
+    "title": "CDC Vaccines and Immunization",
+    "source_id": "cdc:vaccines",
+    "source_url": "https://www.cdc.gov/vaccines/index.html",
+    "text": "The CDC publishes vaccine recommendations, schedules, safety information, and disease-prevention guidance. Recommendations can change with age, health conditions, pregnancy, travel, outbreaks, and current public-health guidance, so an answer must state its date and defer individualized decisions to a healthcare professional."
+  },
+  {
+    "title": "CDC Antibiotic Use",
+    "source_id": "cdc:antibiotic-use",
+    "source_url": "https://www.cdc.gov/antibiotic-use/index.html",
+    "text": "Antibiotics treat certain bacterial infections and do not treat viruses such as colds or flu. Taking antibiotics when they are not needed can cause side effects and contribute to antimicrobial resistance. A clinician must determine whether an antibiotic is appropriate."
+  },
+  {
+    "title": "FDA Drug Safety and Approvals",
+    "source_id": "fda:drug-safety",
+    "source_url": "https://www.fda.gov/drugs",
+    "text": "The FDA publishes information about drug approvals, safety communications, labeling, recalls, and reported risks. Drug names, formulations, warnings, and regulatory status must be checked against current FDA information; an AI answer must not invent a dose or claim that a product is safe for a particular person."
+  },
+  {
+    "title": "FDA Food Safety",
+    "source_id": "fda:food-safety",
+    "source_url": "https://www.fda.gov/food",
+    "text": "The FDA provides current food-safety information, recalls, contamination investigations, and advice for vulnerable groups. Food safety status can change, so users should check current official recalls and follow local public-health instructions."
+  },
+  {
+    "title": "WHO Health Topics",
+    "source_id": "who:health-topics",
+    "source_url": "https://www.who.int/health-topics",
+    "text": "The World Health Organization provides evidence-informed global health information and guidance across diseases, prevention, emergencies, and health systems. Guidance may differ by country and may change as evidence and public-health conditions change."
+  },
+  {
+    "title": "NIH Health Information",
+    "source_id": "nih:health-information",
+    "source_url": "https://www.nih.gov/health-information",
+    "text": "The National Institutes of Health links to health information and research resources. Research findings are not automatically individualized medical advice, and clinical decisions should consider a person's history, examination, tests, and an appropriately qualified clinician."
+  },
+  {
+    "title": "CDC Mental Health",
+    "source_id": "cdc:mental-health",
+    "source_url": "https://www.cdc.gov/mental-health/",
+    "text": "Mental health information is educational and does not diagnose a person. Symptoms that are severe, urgent, or involve immediate danger require local emergency services or crisis support, and a qualified professional can help assess treatment options."
+  },
+  {
+    "title": "Python Official Documentation",
+    "source_id": "python:documentation",
+    "source_url": "https://docs.python.org/3/",
+    "text": "The Python documentation is the reference for the Python language, standard library, setup, and HOWTO guides. Python behavior depends on the installed Python version and library versions, so current version-specific documentation should be checked for exact details."
+  },
+  {
+    "title": "Python Virtual Environments",
+    "source_id": "python:venv",
+    "source_url": "https://docs.python.org/3/library/venv.html",
+    "text": "Python's venv module creates lightweight virtual environments with their own installed packages. A virtual environment helps isolate project dependencies from other Python projects; it does not itself provide security isolation."
+  },
+  {
+    "title": "MDN HTTP Overview",
+    "source_id": "mdn:http",
+    "source_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+    "text": "HTTP is an application protocol for fetching resources and exchanging messages between clients and servers. Requests include methods, URLs, headers, and sometimes a body; responses include a status code, headers, and sometimes a body."
+  },
+  {
+    "title": "MDN JavaScript Guide",
+    "source_id": "mdn:javascript-guide",
+    "source_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+    "text": "The MDN JavaScript Guide covers core language concepts including grammar, control flow, functions, objects, promises, modules, and asynchronous programming. Browser APIs are separate from the JavaScript language itself."
+  },
+  {
+    "title": "Git Documentation",
+    "source_id": "git:documentation",
+    "source_url": "https://git-scm.com/doc",
+    "text": "Git is a distributed version-control system. A repository records commits, branches, and history; a working-tree change is not part of a commit until it is staged and committed."
+  },
+  {
+    "title": "FastAPI Documentation",
+    "source_id": "fastapi:documentation",
+    "source_url": "https://fastapi.tiangolo.com/",
+    "text": "FastAPI is a Python web framework for building APIs with type hints. It can validate request data using Pydantic and can generate OpenAPI documentation for registered routes."
+  },
+  {
+    "title": "Docker Get Started",
+    "source_id": "docker:get-started",
+    "source_url": "https://docs.docker.com/get-started/",
+    "text": "Docker packages applications and their dependencies into images that can run as containers. A Dockerfile describes image construction; container configuration such as secrets should be supplied at runtime rather than baked into the image."
+  },
+  {
+    "title": "OWASP Top Ten",
+    "source_id": "owasp:top-ten",
+    "source_url": "https://owasp.org/www-project-top-ten/",
+    "text": "The OWASP Top Ten is an awareness document describing common web-application security risks. It is a starting point for secure development, not a complete security assessment or guarantee that an application is secure."
+  },
+  {
+    "title": "NIST Cybersecurity Framework",
+    "source_id": "nist:csf",
+    "source_url": "https://www.nist.gov/cyberframework",
+    "text": "The NIST Cybersecurity Framework provides a way to manage cybersecurity risk through functions including Govern, Identify, Protect, Detect, Respond, and Recover. Organizations should adapt the framework to their risks and requirements."
+  },
+  {
+    "title": "GitHub Docs Actions",
+    "source_id": "github:actions",
+    "source_url": "https://docs.github.com/en/actions",
+    "text": "GitHub Actions automates software workflows such as build, test, and deployment using workflow files stored in a repository. Secrets should be stored using the platform's secret-management features rather than committed to workflow files."
+  },
+  {
+    "title": "OpenAI Model Context Protocol",
+    "source_id": "modelcontextprotocol:specification",
+    "source_url": "https://modelcontextprotocol.io/specification/",
+    "text": "The Model Context Protocol defines a standard way for compatible clients and servers to exchange tools and context. A server must implement the supported transport and protocol behavior; an ordinary REST endpoint is not automatically an MCP server."
+  },
+  {
+    "title": "NASA Solar System Exploration",
+    "source_id": "nasa:solar-system",
+    "source_url": "https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/",
+    "text": "NASA describes the solar system as consisting of the Sun and the objects that orbit it, including planets, dwarf planets, moons, asteroids, and comets. Astronomical measurements and classifications can be updated as scientific knowledge develops."
+  },
+  {
+    "title": "NASA Climate Evidence",
+    "source_id": "nasa:climate-evidence",
+    "source_url": "https://science.nasa.gov/climate-change/evidence/",
+    "text": "NASA summarizes multiple lines of evidence for a changing climate, including observed changes in temperature, ice, sea level, and other indicators. Specific measurements and projections should be checked against current scientific sources."
+  },
+  {
+    "title": "USGS Water Science",
+    "source_id": "usgs:water-science",
+    "source_url": "https://www.usgs.gov/mission-areas/water-resources",
+    "text": "The USGS provides scientific information about water resources, including surface water, groundwater, quality, and the water cycle. Local water conditions require location-specific measurements and current data."
+  },
+  {
+    "title": "Khan Academy Learning Resources",
+    "source_id": "khanacademy:learning",
+    "source_url": "https://www.khanacademy.org/",
+    "text": "Khan Academy provides educational lessons and practice across subjects. Educational explanations are learning resources and should be checked against the relevant course, curriculum, or primary reference when precision matters."
+  },
+  {
+    "title": "U.S. Consumer Financial Protection Bureau",
+    "source_id": "cfpb:consumer-finance",
+    "source_url": "https://www.consumerfinance.gov/consumer-tools/",
+    "text": "The CFPB provides consumer-finance education and tools about products such as credit, loans, mortgages, and bank accounts. Financial decisions depend on individual circumstances, contract terms, jurisdiction, and current rates; general information is not personal financial advice."
+  },
+  {
+    "title": "SEC Investor Education",
+    "source_id": "sec:investor-education",
+    "source_url": "https://www.investor.gov/",
+    "text": "The U.S. Securities and Exchange Commission provides investor education about investing, risks, fraud, and checking investment professionals. Investment outcomes are uncertain and information about a security should be checked in current official filings and disclosures."
+  },
+  {
+    "title": "U.S. Copyright Office",
+    "source_id": "copyright:basics",
+    "source_url": "https://copyright.gov/help/faq/faq-general.html",
+    "text": "The U.S. Copyright Office provides general information about copyright. Copyright questions depend on the work, jurisdiction, license, exceptions, and facts; general educational information is not legal advice."
+  },
+  {
+    "title": "U.S. Government Travel Advisories",
+    "source_id": "travel:state-department",
+    "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/",
+    "text": "The U.S. Department of State publishes travel advisories and country information. Travel conditions, entry rules, health requirements, and safety guidance can change, so travelers should check current official notices before making plans."
+  },
+  {
+    "title": "United Nations Sustainable Development Goals",
+    "source_id": "un:sdgs",
+    "source_url": "https://sdgs.un.org/goals",
+    "text": "The United Nations Sustainable Development Goals are a set of global goals and targets addressing social, economic, and environmental development. Country progress and indicators vary and should be checked in current reports."
+  },
+  {
+    "title": "U.S. National Weather Service",
+    "source_id": "weather:nws",
+    "source_url": "https://www.weather.gov/",
+    "text": "The National Weather Service provides weather forecasts, warnings, and observations for the United States. Weather is location- and time-dependent; use current local alerts for safety decisions rather than a static general explanation."
+  },
+  {
+    "title": "WHO Mental Health",
+    "source_id": "who:mental-health",
+    "source_url": "https://www.who.int/health-topics/mental-health",
+    "text": "The World Health Organization describes mental health as a state of mental well-being that supports coping, learning, work, and relationships. Mental-health concerns deserve professional support; an informational system cannot diagnose or replace care."
+  },
+  {
+    "title": "General Emergency Safety",
+    "source_id": "ready:emergencies",
+    "source_url": "https://www.ready.gov/",
+    "text": "Ready.gov provides emergency-preparedness guidance. For immediate danger, contact local emergency services; for disasters, follow current instructions from local authorities because recommended actions depend on the event and location."
+  }
+]

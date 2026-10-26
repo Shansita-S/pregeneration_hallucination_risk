@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hallucination Risk Intelligence</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; }
+    body { margin: 0; background: #101827; color: #e8eef7; }
+    main { max-width: 1050px; margin: 0 auto; padding: 42px 20px 70px; }
+    .hero { margin-bottom: 28px; }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3.5rem); }
+    h2 { margin-top: 0; color: #9dd7ff; }
+    .subtitle, .muted { color: #aebcd0; }
+    .panel { background: #182438; border: 1px solid #2a3b55; border-radius: 16px; padding: 22px; margin-top: 18px; }
+    label { display: block; font-weight: 700; margin-bottom: 10px; }
+    textarea { box-sizing: border-box; width: 100%; min-height: 125px; resize: vertical; border: 1px solid #405674; border-radius: 10px; background: #0d1523; color: inherit; padding: 13px; font: inherit; }
+    .controls { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; margin-top: 15px; }
+    button { border: 0; border-radius: 9px; padding: 12px 18px; background: #55b8f5; color: #07111f; cursor: pointer; font-weight: 800; }
+    button:disabled { cursor: wait; opacity: .6; }
+    .error { color: #ff9f9f; margin-top: 15px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
+    .metric { background: #101827; border-radius: 10px; padding: 15px; }
+    .metric strong { display: block; font-size: 1.35rem; margin-top: 5px; }
+    .evidence { border-left: 3px solid #55b8f5; padding-left: 12px; margin-top: 13px; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+    .hidden { display: none; }
+    a { color: #9dd7ff; }
+  </style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1>Hallucination Risk Intelligence</h1>
+    <p class="subtitle">Predict risk before generation. Retrieve evidence. Verify the answer.</p>
+  </header>
+  <section class="panel">
+    <label for="question">Enter your question</label>
+    <textarea id="question" maxlength="4000" placeholder="What is the difference between supervised and unsupervised learning?"></textarea>
+    <div class="controls">
+      <label><input id="consistency" type="checkbox"> Run optional consistency check</label>
+      <button id="submit">Analyze &amp; Generate Answer</button>
+      <span id="loading" class="muted hidden">Analyzing...</span>
+    </div>
+    <div id="error" class="error hidden" role="alert"></div>
+  </section>
+  <section id="results" class="hidden">
+    <div class="panel"><h2>Question Analysis</h2><pre id="questionResult"></pre></div>
+    <div id="warningsPanel" class="panel hidden"><h2>Warnings</h2><div id="warningsResult"></div></div>
+    <div class="panel"><h2>Pre-Generation Risk Prediction</h2><div id="riskResult" class="grid"></div></div>
+    <div class="panel"><h2>Decision Routing</h2><p id="routeResult"></p></div>
+    <div class="panel"><h2>Retrieved Evidence</h2><div id="evidenceResult"></div><p class="muted">This is a small local demonstration corpus, not comprehensive external research.</p></div>
+    <div class="panel"><h2>Groq-Generated Answer</h2><pre id="answerResult"></pre></div>
+    <div class="panel"><h2>Post-Generation Verification</h2><p id="verificationResult"></p><div id="claimsResult"></div><div id="verificationEvidence"></div></div>
+    <div id="consistencyPanel" class="panel hidden"><h2>Consistency Check</h2><pre id="consistencyResult"></pre><p class="muted">Agreement between samples does not prove factual correctness.</p></div>
+  </section>
+  <p class="muted">Research prototype. Risk scores are model estimates, not guarantees. <a href="/docs">Open API docs</a></p>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const submit = $("submit");
+function item(label, value) {
+  const div = document.createElement("div"); div.className = "metric";
+  div.innerHTML = `<span class="muted">${label}</span><strong>${value}</strong>`; return div;
+}
+function showEvidence(items, target) {
+  target.innerHTML = "";
+  if (!items || !items.length) { target.textContent = "No relevant local evidence was found."; return; }
+  items.forEach(e => {
+    const div = document.createElement("div"); div.className = "evidence";
+    const source = e.source_url ? `<a href="${e.source_url}" target="_blank" rel="noreferrer">${e.source_id || "source"}</a>` : (e.source_id || "unlabelled");
+    div.innerHTML = `<strong>${e.title}</strong><p>${e.text}</p><span class="muted">Source: ${source} | Retrieval score: ${Number(e.score).toFixed(3)}</span>`;
+    target.appendChild(div);
+  });
+}
+submit.addEventListener("click", async () => {
+  const question = $("question").value.trim();
+  $("error").classList.add("hidden");
+  if (!question) { $("error").textContent = "Please enter a question."; $("error").classList.remove("hidden"); return; }
+  submit.disabled = true; $("loading").classList.remove("hidden"); $("results").classList.add("hidden");
+  try {
+    const response = await fetch("/answer", { method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({question, use_groq: true, run_consistency: $("consistency").checked}) });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.detail || "The request could not be completed.");
+    $("questionResult").textContent = data.question;
+    if (data.warnings && data.warnings.length) {
+      $("warningsResult").textContent = data.warnings.join(" ");
+      $("warningsPanel").classList.remove("hidden");
+    } else $("warningsPanel").classList.add("hidden");
+    const score = Number(data.risk.risk_score);
+    $("riskResult").replaceChildren(item("Estimated risk score", `${(score * 100).toFixed(1)}%`), item("Risk category", data.risk.risk_level.toUpperCase()), item("Prediction method", data.risk.model_used), item("Why", data.risk.explanation.join(" ")));
+    $("routeResult").textContent = `${data.route}: ${data.route_explanation}`;
+    showEvidence(data.verification.evidence, $("evidenceResult"));
+    $("answerResult").textContent = data.answer;
+    $("verificationResult").textContent = `${data.verification.status.toUpperCase()} (baseline score: ${data.verification.score}). ${data.verification.explanation}`;
+    $("claimsResult").replaceChildren(...(data.verification.claims || []).map(c => {
+      const div = document.createElement("div"); div.className = "evidence";
+      div.innerHTML = `<strong>${c.verdict}</strong><p>${c.claim}</p><span class="muted">${c.explanation}</span>`;
+      return div;
+    }));
+    showEvidence(data.verification.evidence, $("verificationEvidence"));
+    if (data.consistency) { $("consistencyPanel").classList.remove("hidden"); $("consistencyResult").textContent = JSON.stringify(data.consistency, null, 2); }
+    else $("consistencyPanel").classList.add("hidden");
+    $("results").classList.remove("hidden");
+  } catch (error) { $("error").textContent = error.message; $("error").classList.remove("hidden"); }
+  finally { submit.disabled = false; $("loading").classList.add("hidden"); }
+});
+</script>
+</body>
+</html>
